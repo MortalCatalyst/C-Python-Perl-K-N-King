@@ -10,4 +10,4 @@ Any insight or critique welcome.
 
 [Chapter 3 Notes](https://github.com/MortalCatalyst/C-Python-Perl-K-N-King/blob/master/Chapter_3/Chapter_3_Notes.md) _- Formatted Output_
 
-Chapter 4 Notes _- Expressions_
+[Chapter 4 Notes](https://github.com/MortalCatalyst/C-Python-Perl-K-N-King/blob/master/Chapter_4/Chapter_4_Note.md) _- Expressions_
