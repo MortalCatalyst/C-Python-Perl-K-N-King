@@ -1,18 +1,16 @@
 use strict;
 use warnings;
-use Data::Dumper;
+use List::Util qw( sum ); 
 
 print 'Enter the 11 digiet serial number: ';
-chomp( my @barcode = //, <STDIN> );
+chomp( my @barcode = split //, <STDIN> );
 
-my @sum1 = map { 2 + $_ } $barcode[1] .. $barcode[11];
-my $sum1 = sum Dumper( \@sum1 );
+#see https://stackoverflow.com/a/54436775/461887
+my $sum_even_idxs = sum @barcode[0,2,4,6,8,10];
+my $sum_odd_idxs  = sum @barcode[1,3,5,7,9];
 
-# sum2 = l2 + l4 + l6 + r8 + r10;
-printf "{$sum1}";
-
-# check_digit = 9 - ( ( ( ( ( sum1 * 3 ) + sum2 ) - 1 ) % 10 ) );
-# printf( "Check digit %d\n", check_digit );
+my $check_digit = 9 - ( ( ( ( ( $sum_even_idxs * 3 ) + $sum_odd_idxs ) - 1 ) % 10 ) );
+printf "Check digit $check_digit\n";
 
 1;
 
