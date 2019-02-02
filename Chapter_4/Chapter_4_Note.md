@@ -11,3 +11,6 @@ use Const::Fast;
 
 const my $OCTAL_DIV => 8;
 ```
+
+**Conveinence**
+At this point C's scanf and matching the incoming pattern seems like a clear win, more of a conveince. Being able to set out the pattern you want directly and gaurantee the type you are receiving.
